@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Emir Sungu">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>PicoCSS</title>
+    <link rel="icon" type="image/x-icon" href="img/profil.jpg"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    
+
+    <style>
+      body{
+        background-color: #eee;
+        font-family: 'Lato', sans-serif;
+        height: 2100px;
+        
+      }
+      nav{
+        padding: 10px;
+      }
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+       nav{
+        /* position: fixed;
+        z-index: 1; */
+        background-color: #ddd;
+      } 
+label{
+  
+  font-size: 16px;
+  color: black;
+
+}
+article{
+  position: relative;
+  top: 30px;
+  background-color: #eee;
+
+}
+
+p{
+  font-size: 20px;
+}
+
+  #pricing {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer ul {
+display: flex;
+justify-content: flex-end;
+
+
+}
+footer ul a{
+  font-size: 20px;
+
+  margin: 0px 20px 0px 20px;
+  position: relative;
+  bottom: 50px;
+  right: 25px;
+}
+footer a {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+}
+footer a:hover{
+  background-color: orange;
+}
+footer{
+box-sizing: border-box;
+ /* border: 1px solid black; */
+/* background-color: #ddd;  */
+
+}
+ul li{
+  list-style-type: none;
+}
+footer span{
+display: flex;
+justify-content: flex-end; 
+font-style: italic;
+font-size: 16px;
+margin-right: 65px;
+position: relative;
+bottom: 80px;
+}
+
+</style>
+</head>
+<body>
+  <nav >
+    <ul>
+      <li>
+        <img style="margin-left: 15px;" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="Original Trombones" width="30%">
+      </li>
+    </ul>
+    <ul style="margin-right: 60px;">
+      <li><a style="margin-right: 50px; font-size: 16px;" href="#article1" role="button">Özellikler</a></li>
+      <li><a style="width: 120px; margin-right: 40px; font-size: 16px;" href="#iframe" role="button">Nasıl çalışır</a></li>
+      <li ><a style="font-size: 16px;" href="#price" role="button">Fiyatlandırma</a></li>
+    </ul>
+  </nav>
+
+  <main >
+    <section style=" width: 40%; margin: 0 auto;">
+      <p style="text-align: center; font-weight: 700; color: black;">El işi, ev yapımı şaheserler</p>
+      <form style="padding: 20px;">
+
+        <!-- Grid -->
+        <div class="grid">
+      
+          <!-- Markup example 1: input is inside label -->
+          <label for="firstname">
+          Adınız:
+            <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+          </label>
+      
+          <label for="lastname">
+           Soyadınız:
+            <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+          </label>
+      
+        </div>
+      
+        <!-- Markup example 2: input is after label -->
+        <label for="email">E-Posta Adresiniz:</label>
+        <input type="email" id="email" name="email" placeholder="Email address" required>
+        <small>
+          E-postanızı asla başkasıyla paylaşmayacağız.
+        </small>
+      
+        <input type="submit" value="Gönder">     
+        <input type="reset" value="Sil">
+        <!-- <button type="reset">Sıfırla</button> -->
+        <!-- <button type="submit"></button> -->
+      
+      </form>
+    </section>
+
+    <article id="article1" style=" width: 80%; margin: 0 auto;">
+      <!-- Primary -->
+      <details>
+        <summary role="button">Birinci Sınıf Malzemeler</summary>
+        <p>Trombonlarımız yerel olarak temin edilen en parlak pirinçleri kullanır. Bu, satın alma işleminizin ömrünü uzatacaktır.</p>
+      </details>
+
+      <!-- Secondary -->
+      <details>
+        <summary role="button" class="secondary">Hızlı sevkiyat</summary>
+        <p>Trombonunuzu yapımı biter bitmez almanızı sağlıyoruz. Memnun kalmadığınız takdirde ücretsiz iade de sağlıyoruz.</p>
+      </details>
+
+      <!-- Contrast -->
+      <details>
+        <summary role="button" class="contrast">Kalite güvencesi</summary>
+        <p>Yaptığınız her satın alma işleminde, herhangi bir hasar veya arıza olmadığından emin olacağız ve enstrümanınızın perdesini kontrol edip test edeceğiz.</p>
+      </details>
+    </article>
+ 
+
+    <div id="iframe" style="width: 38%; margin: 80px auto;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc?si=wgGyCpyaXDjK7ydz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <section id="pricing">
+      <div style="border: 1px solid black; width: 23%; margin-right: 25px; box-sizing: border-box;">
+        <p style="text-align: center; background-color: #ddd; color: black;font-weight: 700;">TENOR TROMBONE
+          <span style="color: black; font-weight: 700;"> - $600</span>
+        </p>
+      <p style="width: 40%; margin: auto; position: relative; bottom: 15px;color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div style="border: 1px solid black;width: 23%; margin-right: 25px;box-sizing: border-box;">
+        <p style="text-align: center; background-color: #ddd; color: black;font-weight: 700;">BASS TROMBONE
+          <span style="color: black; font-weight: 700;"> - $900</span>
+        </p>
+      <p style="width: 40%; margin: auto; position: relative; bottom: 15px;color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+
+      </div>
+      <div id="price" style="border: 1px solid black;width: 23%; box-sizing: border-box;">
+        <p style="text-align: center; background-color: #ddd; color: black;font-weight: 700;">VALVE TROMBONE
+          <span style="color: black; font-weight: 700;"> - $1200</span>
+        </p>
+      <p style="width: 40%; margin: auto; position: relative; bottom: 15px;color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </section>
+  </main>
+  <footer style="height: 50px;width: 80%; position: relative; bottom: 105px;">
+    <ul>
+      <li><a href="#" >Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <span>Copyright 2016, Original Trombones</span>
+ </footer> 
+ <script>
+  alert(
+    "Sayfama Hoş Geldiniz!"
+  )
+</script>
+
+</body>
+</html>
